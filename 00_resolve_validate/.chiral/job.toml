@@ -1,0 +1,20 @@
+name = "Resolve & Validate"
+description = "Accepts a CSV with molecule names and/or SMILES. Resolves missing SMILES via PubChem, canonicalizes all structures with RDKit, removes duplicates. Outputs standardized_molecules.csv ready for solubility prediction."
+inputs = ["molecules.csv"]
+outputs = ["standardized_molecules.csv", "validation_report.json"]
+
+[container]
+image = "solubility_pipeline:2026_06_05"
+
+[scripts]
+run = "run.sh"
+
+[params.smiles_column]
+type = "string"
+default = "smiles"
+hint = "Name of the SMILES column in the input CSV"
+
+[params.name_column]
+type = "string"
+default = "name"
+hint = "Name of the molecule name column in the input CSV"

@@ -1,0 +1,6 @@
+{
+  "smiles_column": "smiles",
+  "name_column": "name",
+  "solvents": "top50",
+  "temperature_c": 25.0
+}

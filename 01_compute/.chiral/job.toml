@@ -1,0 +1,26 @@
+name = "Compute Solubility"
+description = "Runs fastsolv (MIT 2025) predictions on the validated molecules. Predicts log(S) solubility in the selected solvent set at the specified temperature. Outputs solubility_predictions.csv in long format (one row per molecule–solvent pair)."
+inputs = ["standardized_molecules.csv"]
+outputs = ["solubility_predictions.csv"]
+
+[container]
+image = "solubility_pipeline:2026_06_05"
+
+[scripts]
+run = "run.sh"
+
+[params.smiles_column]
+type = "string"
+default = "smiles"
+hint = "Name of the SMILES column in standardized_molecules.csv"
+
+[params.solvents]
+type = "enum"
+default = "top50"
+hint = "Solvent set to predict against. 'top50' uses the 50 most common pharma/lab solvents; 'all' uses all 136 BigSolDB solvents."
+values = ["top50", "all"]
+
+[params.temperature_c]
+type = "float"
+default = 25.0
+hint = "Prediction temperature in degrees Celsius. Valid range: -30 to 130 °C."
