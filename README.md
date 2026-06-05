@@ -8,6 +8,22 @@ For each input molecule, the pipeline predicts log(S) solubility (mol/L) in up t
 
 ---
 
+## Quick test
+
+A single-molecule input is provided in `test/aspirin_test.csv` to verify the pipeline is working correctly before running your full compound set.
+
+Use it as the workflow input in Silva. The expected output for Aspirin at 25 °C is:
+
+| Best solvent | logS (approx.) | Category |
+|---|---|---|
+| water | ~ −2.0 | 10–1000 mmol/L |
+| ethanol | ~ −1.5 | 10–1000 mmol/L |
+| methanol | ~ −1.5 | 10–1000 mmol/L |
+
+> Values are approximate — small run-to-run variation (~±0.01) is normal due to PyTorch non-determinism.
+
+---
+
 ## Workflow structure
 
 ```
