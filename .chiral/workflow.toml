@@ -1,0 +1,6 @@
+name = "AI Solubility Chiral Workflow"
+description = "Resolves and validates molecules, computes solubility predictions, and generates visualization"
+
+[dependencies]
+01_compute = ["00_resolve_validate"]
+02_visualize = ["01_compute"]
