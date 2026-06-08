@@ -1,0 +1,9 @@
+name = "Download Sample Input"
+description = "Downloads the sample molecules CSV from the workflow repository. Skip this node and supply your own input_files/molecules.csv to screen a custom compound set."
+outputs = ["molecules.csv"]
+
+[container]
+image = "solubility_pipeline:2026_06_05"
+
+[scripts]
+run = "run.sh"
