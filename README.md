@@ -1,6 +1,6 @@
 # ai-solubility-chiral-workflow
 
-A [Silva](https://chiral.ai) workflow for predicting organic solubility in multiple solvents, powered by **[fastsolv](https://github.com/JacksonBurns/fastsolv)** (MIT, 2025).
+A [Silva](https://github.com/chiral-data/silva) workflow for predicting organic solubility in multiple solvents, powered by **[fastsolv](https://github.com/JacksonBurns/fastsolv)** (MIT, 2025).
 
 Designed for experimentalists in chemical and pharmaceutical industries who need to shortlist the best solvents for purification without exhaustively screening a long solvent list. For a given set of molecules, the pipeline predicts log(S) solubility (mol/L) across up to 136 solvents at any temperature from −30 to 130 °C, ranks them, and delivers an interactive HTML report with a heatmap and per-molecule bar charts.
 
